@@ -16,7 +16,19 @@ To use this tool, follow these steps:
 2. Execute the tool as follows
 
 ```
-./sni-discover -target 1.2.3.4 -best 10 -h2only
+$ ./sni-discover -target 1.1.1.1 -best 5 -h2only -debug
+2024/05/06 19:04:45 Resolving 1000 SNIs.
+2024/05/06 19:04:45 Waiting for resolvers.
+2024/05/06 19:04:56 Sorting 1000 SNIs.
++---+---------------------+---------+----------+--------------+-------+
+| # | SNI                 | TLS     | PROTO    |     DURATION | EXTRA |
++---+---------------------+---------+----------+--------------+-------+
+| 0 | 020806.xyz          | TLSv1.3 | HTTP/2.0 | 486.304852ms |       |
+| 1 | 111984.xyz          | TLSv1.3 | HTTP/2.0 | 622.392936ms |       |
+| 2 | 111331.xyz          | TLSv1.3 | HTTP/2.0 | 654.457576ms |       |
+| 3 | 0061681.xyz         | TLSv1.3 | HTTP/2.0 | 765.647363ms |       |
+| 4 | 101homebusiness.com | TLSv1.3 | HTTP/2.0 | 838.300103ms |       |
++---+---------------------+---------+----------+--------------+-------+
 ```
 
 Optional parameters include:
